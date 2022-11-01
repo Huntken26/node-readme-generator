@@ -27,7 +27,7 @@ To install you must have node js on your computer along with the inquirer 8.2.4 
 First, Open up the integrated terminal. <br/>Second, make sure you are in the correct file path- package json. <br/>Third run node index. <br/>Fourth, fill out the prompts. <br/>Fifth allow the program to do its work and you can customize the final readme as neccessary.<br/>
 Here is a video walkthrough:<br/>
 
-
+https://user-images.githubusercontent.com/107738986/199193079-d3106a85-b1ef-483d-b941-ed99e8e9caf6.mp4
 
 
 ## CREDIT/ACKNOWLEDGEMENT:

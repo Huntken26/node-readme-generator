@@ -7,24 +7,32 @@ const inquirer = require("inquirer");
 const generateReadme = ({
   title,
   description,
-  contents,
   installation,
   usage,
   credit,
   license,
-  badges,
-  features,
-  contact,
+  tests,
+  github,
+  email
 }) =>
   `# ${title}:
 
+  [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  
 ## DESCRIPTION:
 
 ${description}
 
 ## TABLE OF CONTENTS:
 
-${contents}
+[installation](#installation) <br/>
+[usage](#usageinstructions)<br/>
+[credits](#credits)<br/>
+[license](#licenses)<br/>
+[badges](#badges)<br/>
+[tests](#tests)<br/>
+[contributions](#contribute)<br/>
+[questions](#questions)<br/>
 
 ## INSTALLATION:
 
@@ -36,23 +44,30 @@ ${usage}
 
 ## CREDITS:
 
-${credit}
+I'd like to thank ${credit} for helping me with this project.
 
 ## LICENSES:
 
 ${license}
+"[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
 
 ## BADGES:
+<img src="https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white" />
+<img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
+<img src="https://img.shields.io/badge/json-5E5C5C?style=for-the-badge&logo=json&logoColor=white" />
+<img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" />
 
-${badges}
+## TESTS:
 
-## FEATURES:
+${tests}
 
-${features}
+## CONTRIBUTE:
 
-## HOW TO CONTRIBUTE:
+You can connect with me via gihub- ${github}
 
-${contact}
+## QUESTIONS:
+
+You can contact me via email - ${email}
 
 `;
 
@@ -95,18 +110,18 @@ inquirer
     },
     {
       type: "input",
-      message: "Do you have any badges?",
-      name: "badges",
+      message: "Do you have any tests?",
+      name: "tests",
     },
     {
       type: "input",
-      message: "Does your project have any special features?",
-      name: "features",
+      message: "How can one contribute? github?",
+      name: "github",
     },
     {
       type: "input",
-      message: "How can one contribute to your project?",
-      name: "contact",
+      message: "How can one reach you for questions? Email?",
+      name: "email",
     },
   ])
   .then((answers) => {
